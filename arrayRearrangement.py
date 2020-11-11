@@ -3,7 +3,10 @@ def function(num , arr1 , arr2):
    arr2.sort(reverse=True)
    fun = lambda x,y:x+y
    sumArr =  list(map(fun,arr1,arr2))
-   return sumArr
+   for i in sumArr:
+      if i > num:
+         return False
+   return True
 if __name__ == "__main__":
    t = int(input())
    for i in range(t):
